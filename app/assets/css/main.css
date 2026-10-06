@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+
+body { @apply m-0 bg-gray-50 text-gray-900; }
+button, select { cursor: pointer; }
+button:disabled { cursor: wait; }
+button, input, select, textarea { letter-spacing: 0; }
+button:focus-visible, a:focus-visible { outline: 2px solid #0d7666; outline-offset: 4px; }
+.field { @apply w-full rounded-md border border-gray-300 bg-white px-3 py-2.5 text-sm; }
+.field:focus { outline: 2px solid #0d7666; outline-offset: 1px; }
+.primary { @apply inline-flex items-center justify-center gap-2 rounded-md bg-emerald-700 px-4 py-2.5 text-sm font-semibold text-white; }
+.primary:hover { @apply bg-emerald-800; }
+.primary:disabled { opacity: .6; }
+.secondary { @apply inline-flex items-center justify-center gap-2 rounded-md border border-gray-300 bg-white px-3.5 py-2 text-sm font-semibold; }
+.secondary:hover { background: #f1f3f5; }
+dialog { margin: auto; width: min(560px, calc(100% - 32px)); max-height: calc(100dvh - 32px); overflow-y: auto; border: 0; border-radius: 8px; padding: 0; }
+dialog::backdrop { background: rgb(20 28 35 / 45%); }
+@media (prefers-reduced-motion: no-preference) {
+  .entry { animation: appear .25s ease-out; }
+  @keyframes appear { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+}
